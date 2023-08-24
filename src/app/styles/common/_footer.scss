@@ -1,0 +1,59 @@
+.footer {
+  &-primary {
+    background: $main-bg;
+    padding: 50px 0;
+    color: $gray-tertiary;
+
+    &-inner {
+      display: grid;
+      grid-template-areas:
+        'nav'
+        'contact'
+        'connect';
+      row-gap: 52px;
+
+      @include media-breakpoint-up(lg) {
+        grid-template-areas:
+          'nav nav'
+          'connect contact';
+        row-gap: 24px;
+        grid-template-columns: 340px 1fr;
+      }
+    }
+  }
+
+  &-nav {
+    grid-area: nav;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
+
+    ul {
+      width: 50%;
+    }
+
+    @include media-breakpoint-up(lg) {
+      flex-wrap: nowrap;
+      row-gap: initial;
+      column-gap: 88px;
+
+      ul {
+        width: auto;
+      }
+    }
+  }
+
+  &-contact {
+    grid-area: contact;
+  }
+
+  &-connect {
+    grid-area: connect;
+    justify-self: center;
+
+    @include media-breakpoint-up(lg) {
+      justify-self: start;
+      align-self: center;
+    }
+  }
+}
