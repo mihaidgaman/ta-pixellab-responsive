@@ -212,7 +212,9 @@ export default function Footer() {
             rel="noopener noreferrer"
             title="Pixellab.ro"
           >
-            <img src="images/pixellab_logo.jpg" alt="Pixellab - Logo" />
+            <picture>
+              <img src="/images/pixellab_logo.jpg" alt="Pixellab - Logo"></img>
+            </picture>
           </a>
         </p>
       </div>
