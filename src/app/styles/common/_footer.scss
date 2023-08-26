@@ -27,9 +27,11 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: 50px;
+    text-transform: uppercase;
 
     ul {
       width: 50%;
+      color: $gray-tertiary;
     }
 
     @include media-breakpoint-up(lg) {
@@ -45,11 +47,51 @@
 
   &-contact {
     grid-area: contact;
+    display: inline-block;
+    vertical-align: bottom;
+    text-transform: uppercase;
+
+    h1 span {
+      font-weight: 500;
+      color: $white;
+    }
+
+    h1 {
+      font-size: 16px;
+    }
+
+    p {
+      text-transform: initial;
+      line-height: 22px;
+    }
+
+    a[href^='mailto:'] {
+      color: $brand-primary;
+    }
+  }
+
+  &-secondary {
+    text-align: center;
   }
 
   &-connect {
     grid-area: connect;
     justify-self: center;
+    text-align: center;
+    display: inline-block;
+    text-transform: uppercase;
+
+    ul {
+      display: flex;
+      gap: 36px;
+      text-align: center;
+    }
+
+    ul i[class*='fa-'] {
+      color: $brand-primary;
+      display: block;
+      font-size: 36px;
+    }
 
     @include media-breakpoint-up(lg) {
       justify-self: start;

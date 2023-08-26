@@ -33,6 +33,12 @@
       display: flex;
       gap: 16px;
     }
+
+    ul a {
+      i[class*='fa-'] {
+        color: $brand-primary;
+      }
+    }
   }
 
   &-controls {
@@ -45,6 +51,23 @@
       i[class*='fa-'] {
         font-size: 24px;
       }
+    }
+
+    ul span {
+      background-color: $brand-primary;
+      color: $white;
+      font-size: 14px;
+      font-weight: 700;
+      width: 21px;
+      height: 21px;
+      padding: 0 4px;
+      border-radius: 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: -10px;
+      right: -10px;
     }
   }
 
@@ -84,6 +107,28 @@
         &:hover {
           background: $brand-primary;
           color: $white;
+        }
+      }
+    }
+
+    .nav-secondary {
+      ul {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+      }
+
+      a {
+        display: block;
+        padding: 8px 16px;
+        font-weight: 300;
+        font-size: 14px;
+        text-transform: uppercase;
+        transition: color 0.2s linear, background-color 0.2s linear;
+        text-decoration: none;
+
+        &:hover {
+          color: $brand-primary;
         }
       }
     }
