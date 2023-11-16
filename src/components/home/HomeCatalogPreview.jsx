@@ -1,6 +1,9 @@
 import CatalogPreview from '../catalog/CatalogPreview';
 
-export default function HomeCatalogPreview() {
+export default function HomeCatalogPreview(props) {
+  // const productImages = props.productImages
+  const { productImages } = props;
+
   return (
     <section className="home-catalog-preview container">
       <header>
@@ -17,7 +20,7 @@ export default function HomeCatalogPreview() {
         </p>
       </header>
 
-      <CatalogPreview></CatalogPreview>
+      <CatalogPreview productImages={productImages}></CatalogPreview>
     </section>
   );
 }

@@ -29,7 +29,7 @@ export default function HomeCarousel() {
               return (
                 <li key={index} className="glide__slide">
                   <picture>
-                    <img src={imagePath} alt="" />
+                    <img src={imagePath} alt=""></img>
                   </picture>
                 </li>
               );
@@ -37,7 +37,7 @@ export default function HomeCarousel() {
           </ul>
         </div>
 
-        <div class="glide__arrows" data-glide-el="controls">
+        <div className="glide__arrows" data-glide-el="controls">
           <button
             className="glide__arrow glide__arrow--left button button-primary"
             data-glide-dir="<"

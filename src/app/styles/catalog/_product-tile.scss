@@ -8,46 +8,26 @@
     }
   }
 
-  @include media-breakpoint-up(lg) {
-    .badge {
-      display: inline-flex;
-      position: absolute;
-      margin-left: -86px;
-      margin-top: 26px;
-    }
-  }
+  &-image {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
 
-  .product-tile-title {
-    font-size: 24px;
-    margin-top: 20px;
-
-    span:first-child {
-      color: black;
-      font-weight: 600;
+    .main {
+      grid-column: 1 / span1;
+      grid-row: 1 / span 1;
+      z-index: 1;
     }
 
-    span:last-child {
-      font-weight: 600;
-    }
-  }
-
-  .product-tile-subtitle {
-    font-size: 20px;
-  }
-
-  .product-tile-content {
-    p:first-child {
-      text-decoration: line-through;
+    .alt {
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
     }
 
-    p:last-child {
-      font-size: 24px;
-      text-transform: uppercase;
-    }
-
-    p:last-child span {
-      color: $brand-primary;
-      font-weight: 600;
+    &:hover {
+      .alt {
+        z-index: 2;
+      }
     }
   }
 }
